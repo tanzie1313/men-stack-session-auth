@@ -51,6 +51,11 @@ res.send(`Thanks for signing up ${user.username}`);
 
     }
     );
+    router.get("/sign-out", (req, res) => {
+        req.session.destroy();
+       res.redirect("/");
+      });
+      
   
 
 module.exports = router;
